@@ -7,7 +7,11 @@ int main(){
   cin >> type;
   ofstream textfile;
   textfile.open("typefile.odt");
-  textfile << type;
-  textfile.close();
+  if(type == "EXIT") {
+    textfile.close();
+  }
+  else {
+    textfile << type;
+  }
   return 0;
 }
